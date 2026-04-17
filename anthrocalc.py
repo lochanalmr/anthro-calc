@@ -1,6 +1,5 @@
 from menu import *
 from modules import *
-from collector_functions import *
 import sys
 
 VERSION = "1.0.0"
@@ -23,9 +22,9 @@ def main():
             print("\nCalculated and classified by AnthroCalc v" + VERSION)
             while True:
                 c = input("Press [E] to exit, or [R] to return to main menu: ")
-                if c != "" and c != None:
+                if c != "" and c is not None:
                     c = c.upper()
-                if c == "" or c == None:
+                if c == "" or c is None:
                     continue
                 elif c == "E":
                     sys.exit(0)
