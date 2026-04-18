@@ -22,6 +22,8 @@ def main():
                     bai_module()
                 case "WHR":
                     whr_module()
+                case "MM":
+                    multimeasure_module()
             
             print("\nCalculated and classified by AnthroCalc v" + VERSION)
             while True:

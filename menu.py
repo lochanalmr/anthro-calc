@@ -5,7 +5,7 @@ def menu_display():
     print("WHR: Waist to Hip Ratio")
     #print("WHTR: Waist to Height Ratio")
     #print("RFM: Relative Fat Mass")
-    #print("MM: MultiMeasure")
+    print("MM: MultiMeasure")
     #print("H: Learn more about these functions")
 
 
@@ -19,7 +19,7 @@ def option_selection():
             #add options here
             if option != "" and not None:
                 option = option.upper()
-                if option != "BMI" and option != "BAI" and option != "WHR":
+                if option != "BMI" and option != "BAI" and option != "WHR" and option != "MM":
                     print("Not a supported option")
                     option = ""
 
