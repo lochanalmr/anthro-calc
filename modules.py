@@ -16,12 +16,12 @@ def bmi_module():
     weight = measurement_data.weight_col(unit)
 
     metrics = Metrics()
-    bmi = metrics.bmi_calc(weight, height)
+    metrics.bmi_calc(weight, height)
     print(f"\nBMI Value: {metrics.bmi:.2f}")
 
-    classifications = Classifications()
-    classifications.bmi_classification(region, metrics.bmi)
-    print(f"BMI Classification: {classifications.bmi_class}")
+    classes = Classifications()
+    classes.bmi_classification(region, metrics.bmi)
+    print(f"BMI Classification: {classes.bmi_class}")
 
 def bai_module():
     print("\nBAI Calculation and Classification Module")
@@ -38,9 +38,31 @@ def bai_module():
     hipc = measurement_data.hipc_col(unit)
 
     metrics = Metrics()
-    bai = metrics.bai_calc(height, hipc)
+    metrics.bai_calc(height, hipc)
     print(f"\nBAI Value: {metrics.bai:.2f}")
 
-    classifications = Classifications()
-    classifications.bai_classification(bai, gender, age)
-    print(f"BAI Classification: {classifications.bai_class}")
+    classes = Classifications()
+    classes.bai_classification(metrics.bai, gender, age)
+    print(f"BAI Classification: {classes.bai_class}")
+
+def whr_module():
+    print("\nWaist to Hip Ratio Calculation and Classification Module")
+
+    user_data = BasicData()
+    basic_data_dict = user_data.basic_data_col()
+    age = basic_data_dict["age"]
+    gender = basic_data_dict["gender"]
+    unit = basic_data_dict["unit"]
+
+    print("\nMeasurement Data Collection for BAI")
+    measurement_data = MeasurementData()
+    waist = measurement_data.waistc_col(unit)
+    hipc = measurement_data.hipc_col(unit)
+
+    metrics = Metrics()
+    whr = metrics.whr_calc(waist, hipc)
+    print(f"\nWaist to Hip Ratio Value: {metrics.whr:.2f}")
+
+    classes = Classifications()
+    classes.whr_classification(whr, gender)
+    print(f"Waist to Hip Ratio Classification: {classes.whr_class}")

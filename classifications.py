@@ -2,6 +2,7 @@ class Classifications:
     def __init__(self):
         self.bmi_class = None
         self.bai_class = None
+        self.whr_class = None
 
     def bmi_classification(self, region, bmi):
         if region == 'O':
@@ -94,3 +95,23 @@ class Classifications:
         else:
             self.bai_class = "Classification error due to invalid input"
         return self.bai_class
+
+    def whr_classification(self, whr, gender):
+        if gender == 'M':
+            if whr <= 0.95:
+                self.whr_class = "Low Health Risk"
+            elif whr <= 1:
+                self.whr_class = "Moderate Health Risk"
+            else:
+                self.whr_class = "High Health Risk"
+
+        elif gender == 'F':
+            if whr <= 0.8:
+                self.whr_class = "Low Health Risk"
+            elif whr <= 0.85:
+                self.whr_class = "Moderate Health Risk"
+            else:
+                self.whr_class = "High Health Risk"
+        else:
+            self.whr_class = "Classification error due to invalid input"
+        return self.whr_class

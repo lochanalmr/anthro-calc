@@ -6,9 +6,9 @@ No pre-requisites are required to run the executable. (Executable only available
 ### Implemented metrics
 - BMI: Body Mass Index
 - BAI: Body Adiposity Index
+- WHR: Waist to Hip Ratio
 
 ### Metrics to be implemented
-- WHR: Waist to Hip Ratio
 - WHTR: Waist to Height Ratio
 - RFM: Relative Fat Mass
 
