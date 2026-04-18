@@ -13,3 +13,5 @@ No pre-requisites are required to run the executable. (Executable only available
 - RFM: Relative Fat Mass
 
 A function to calculate all health metrics at once, called 'MultiMeasure' will be introduced, and it will also feature the ability to export a text report. 'Help' function will be introduced to show information about the supported functions.
+
+![img.png](img.png)
