@@ -4,3 +4,5 @@ dist/
 *.spec
 *.ico
 *.idea
+.vscode/
+*.txt
