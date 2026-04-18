@@ -2,7 +2,7 @@ from menu import *
 from modules import *
 import sys
 
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 
 def main():
     print("======================================")
@@ -18,6 +18,8 @@ def main():
             match option:
                 case "BMI":
                     bmi_module()
+                case "BAI":
+                    bai_module()
             
             print("\nCalculated and classified by AnthroCalc v" + VERSION)
             while True:
@@ -34,7 +36,6 @@ def main():
                     continue
         except KeyboardInterrupt:
             break
-
         
 
 if __name__ == "__main__":

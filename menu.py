@@ -1,7 +1,7 @@
 def menu_display():
     print("\nMenu: ")
     print("BMI: Body Mass Index")
-    #print("BAI: Body Adiposity Index")
+    print("BAI: Body Adiposity Index")
     #print("WHR: Waist to Hip Ratio")
     #print("WHTR: Waist to Height Ratio")
     #print("RFM: Relative Fat Mass")
@@ -19,7 +19,7 @@ def option_selection():
             #add options here
             if option != "" and not None:
                 option = option.upper()
-                if option != "BMI":
+                if option != "BMI" and option != "BAI":
                     print("Not a supported option")
                     option = ""
 

@@ -1,6 +1,7 @@
 class Classifications:
     def __init__(self):
         self.bmi_class = None
+        self.bai_class = None
 
     def bmi_classification(self, region, bmi):
         if region == 'O':
@@ -22,3 +23,74 @@ class Classifications:
             else:
                 self.bmi_class = "Obese"
         return self.bmi_class
+
+    def bai_classification(self, bai, gender, age):
+        if gender == 'M':
+            if age < 20:
+                self.bai_class = "Unable to classify for people below 20 years old"
+            elif age < 40:
+                if bai < 8:
+                    self.bai_class = "Underweight"
+                elif bai < 21:
+                    self.bai_class = "Normal"
+                elif bai < 26:
+                    self.bai_class = "Overweight"
+                else:
+                    self.bai_class = "Obese"
+            elif age < 60:
+                if bai < 11:
+                    self.bai_class = "Underweight"
+                elif bai < 23:
+                    self.bai_class = "Normal"
+                elif bai < 29:
+                    self.bai_class = "Overweight"
+                else:
+                    self.bai_class = "Obese"
+            elif age < 80:
+                if bai < 13:
+                    self.bai_class = "Underweight"
+                elif bai < 25:
+                    self.bai_class = "Normal"
+                elif bai < 31:
+                    self.bai_class = "Overweight"
+                else:
+                    self.bai_class = "Obese"
+            else:
+                self.bai_class = "Unable to classify for people above 80 years old"
+
+        elif gender == 'F':
+            if age < 20:
+                self.bai_class = "Unable to classify for people below 20 years old"
+            elif age < 40:
+                if bai < 21:
+                    self.bai_class = "Underweight"
+                elif bai < 33:
+                    self.bai_class = "Normal"
+                elif bai < 39:
+                    self.bai_class = "Overweight"
+                else:
+                    self.bai_class = "Obese"
+            elif age < 60:
+                if bai < 23:
+                    self.bai_class = "Underweight"
+                elif bai < 35:
+                    self.bai_class = "Normal"
+                elif bai < 41:
+                    self.bai_class = "Overweight"
+                else:
+                    self.bai_class = "Obese"
+            elif age < 80:
+                if bai < 25:
+                    self.bai_class = "Underweight"
+                elif bai < 38:
+                    self.bai_class = "Normal"
+                elif bai < 43:
+                    self.bai_class = "Overweight"
+                else:
+                    self.bai_class = "Obese"
+            else:
+                self.bai_class = "Unable to classify for people above 80 years old"
+
+        else:
+            self.bai_class = "Classification error due to invalid input"
+        return self.bai_class
