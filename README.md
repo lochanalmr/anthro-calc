@@ -1,5 +1,6 @@
 # AnthroCalc Program Guide
 AnthroCalc is a command-line body composition metrics calculator program to _**calculate and classify**_ **body composition related metrics**. Simply run the executable file, and provide the necessary inputs. When using 'Metric' units, feel free to use either cm or m, but correctly mention whether cm or m was used, when prompted. For measurements that use 'Imperial' units, by default, it is considered that all lengths are in inches, and weight is in lbs. Inches and lbs are converted to metric units before calculation, if used.
+No pre-requisites are required to run the executable. (Executable only available for Windows)
 
 ## Functions
 ### Implemented metrics
