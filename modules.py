@@ -3,6 +3,7 @@ from calculations import *
 from classifications import *
 from datetime import datetime
 from anthrocalc import VERSION
+from database_connect import *
 
 def bmi_module():
     print("\nBMI Calculation and Classification Module")
@@ -99,6 +100,9 @@ def multimeasure_module():
     print(f"WHR Classification: {classes.whr_classification(metrics.whr, gender)}")
     print()
 
+    name = input("Enter name to write to database: ")
+    data_write(name, height, weight, hipc, waistc, metrics.bmi, metrics.bai, metrics.whr)
+
     report_gen_choice = ""
     while report_gen_choice == "":
         report_gen_choice = input("Would you like to export this report as a text file (Y: Yes / N: No)?: ")
@@ -127,4 +131,4 @@ def multimeasure_module():
                     file.write(f"\n\nReport generated at {timestamp}")
                     file.write(f"\nAnthroCalc v{VERSION}")
                 
-                print(f"{filename} was successfully exported to the same folder this program ran from")
+                print(f"{filename} was successfully exported to the same folder this program ran from")    
