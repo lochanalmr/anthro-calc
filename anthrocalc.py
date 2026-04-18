@@ -2,7 +2,7 @@ from menu import *
 from modules import *
 import sys
 
-VERSION = "1.2.0"
+VERSION = "1.3.0"
 
 def main():
     print("======================================")
