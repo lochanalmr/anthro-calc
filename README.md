@@ -7,11 +7,10 @@ No pre-requisites are required to run the executable. (Executable only available
 - BMI: Body Mass Index
 - BAI: Body Adiposity Index
 - WHR: Waist to Hip Ratio
+- MM: MultiMeasure
 
 ### Metrics to be implemented
 - WHTR: Waist to Height Ratio
 - RFM: Relative Fat Mass
 
-A function to calculate all health metrics at once, called 'MultiMeasure' will be introduced, and it will also feature the ability to export a text report. 'Help' function will be introduced to show information about the supported functions.
-
-![img.png](img.png)
+'MultiMeasure' feature is designed to collect all supported measurements, and calculate + classify body composition metrics supported in the program at once. A 'Help' function will be introduced to show information about the supported functions.
